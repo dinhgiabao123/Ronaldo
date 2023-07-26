@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Background/Background.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    font-family: 'Segoe UI';
+    justify-content: space-between;
+    position:fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    align-items: center;
+    width: 100%;
+    z-index: 99;
+}
+
+.navigation a{
+    position:relative;
+    font-size:1.1em;
+    color:#fff;
+    margin-left:40px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:3px;
+    background: #fff;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none
+}
+
+
+.login-or-register button{
+    height:100px;
+    width: 500px;
+    background:#bb7979;
+    border-radius: 5%;
+    font-size:xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.login-or-register button:hover{
+    background: #ce9999;
+}
+
+.wrapper{
+    position: relative;
+    background: transparent;
+    width: 350px;
+    height: 400px;
+    border: 2px solid #b19696;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px ;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /*overflow: hidden;*/
+}
+
+
+.wrapper form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+
+
+.wrapper .form-box.register{
+    position:absolute;
+}
+
+.about-text{
+    background: #bb7979;
+    border: 2px solid;
+    overflow: clip;
+}
+
+.form-box h2{
+    color: #ddbcbc;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-box{
+    position:relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(138, 138, 172);
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    transform:translateY(-50%) ;
+    pointer-events: none;
+    font-weight: 500;
+    transition: .5s;
+    font-size: 1em;
+    color: #e9dfdfbd;;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent ;
+    border: none;
+    outline: none;
+    color:#fff;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+.remember-forgot {
+    justify-content: space-between;
+    display: flex;
+    margin: -15px 0 15px;
+    color:#fff;
+    font-weight: 200;
+    font-size:.9em;
+}
+
+.remember-forgot a{
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-left: 1em;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+    color:#fff;
+}
+
+.btn{
+    background: rgb(169, 122, 175);
+    border: #ddbcbc;
+    height: 20px;
+    width: 100%;
+    border-radius: 3px;
+    transition: .5s;
+    color:#fff;
+}
+
+.btn:hover{
+    background: #d8c2c2;
+    color: antiquewhite;
+}
+
+.register a{
+    color:#a58181;
+    font-size: 0.87em;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.register a:hover{
+    color:#fff;
+    text-decoration: underline;
+}
+
